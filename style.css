@@ -1,19 +1,33 @@
 body {
-	border: 1px dotted tomato;
-	box-sizing: border-box;
-	border-width: 0 1px;
-	font-family: sans-serif;
-	font-size: 2rem;
-	margin: 0 auto;
-	max-width: 700px;
-	min-height: 100vh;
-	padding: 4rem;
+  border: 1px dotted tomato;
+  box-sizing: border-box;
+  border-width: 0 1px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 100vh;
+  padding: 4rem;
 }
 
 ul {
-	padding: 0;
+  padding: 0;
+  margin-left: 2em;
 }
 
 ul li {
-	padding: 1rem 0;
+  padding: 1rem 0;
+  font-size: 0.75em;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.toDoInFocus {
+  background-color: lightblue;
+}
+
+input {
+  margin: 0 3em 0 3em;
+  width: 70%;
 }
