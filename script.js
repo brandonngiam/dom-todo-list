@@ -14,19 +14,31 @@ for (task of tasks) {
   addNewToDo(task);
 }
 
+//strikethrough
 toDoList.addEventListener("click", function(event) {
   event.target.classList.toggle("done");
 });
 
+//highlight in focus to-dos
 toDoList.addEventListener("mouseover", function(event) {
-  event.target.classList.add("toDoInFocus");
+  //if statement prevents all li tags to be highlighted when mouse is over the
+  //parent element
+  if (event.target !== event.currentTarget)
+    event.target.classList.add("todo-in-focus");
 });
 
 toDoList.addEventListener("mouseout", function(event) {
-  event.target.classList.remove("toDoInFocus");
+  event.target.classList.remove("todo-in-focus");
 });
 
-addButton.addEventListener("click", function() {
-  if (userInput.value !== "") addNewToDo(userInput.value);
-  userInput.value = "";
-});
+//add new to do
+
+// userInput.addEventListener("click", function(event) {
+//   event.currentTarget.value = "";
+//   event.target.classList.add(".userinput-in-focus");
+// });
+
+// addButton.addEventListener("click", function() {
+//   if (userInput.value !== "") addNewToDo(userInput.value);
+//   userInput.value = "";
+// });
